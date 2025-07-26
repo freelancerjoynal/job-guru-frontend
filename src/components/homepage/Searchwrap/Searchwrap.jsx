@@ -2,6 +2,10 @@
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import Combobox from "./Combobox";
+import Link from "next/link";
+import { FaShoppingBag } from "react-icons/fa";
+import { PiStudentBold } from "react-icons/pi";
+
 
 
 export default function Searchwrap() {
@@ -9,7 +13,7 @@ export default function Searchwrap() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
 
-  console.log(searchInput)
+  console.log(searchInput);
 
   const categoryitems = [
     { id: "1", title: "Backlog" },
@@ -49,7 +53,7 @@ export default function Searchwrap() {
       </h2>
       <br />
       <br />
-      <div className="flex items-center flex-col justify-center gap-4 max-w-[500]">
+      <div className="flex items-center flex-col lg:flex-row justify-center gap-4 ">
         <Input
           placeholder="Search for jobs"
           className="w-[300px] py-8 px-6 rounded-full"
@@ -59,19 +63,42 @@ export default function Searchwrap() {
         <Combobox
           title="Select category"
           items={categoryitems}
-          btnStyles={"w-[300px] justify-between bg-transparent rounded-full py-8"} 
+          btnStyles={
+            "w-[300px] justify-between bg-transparent rounded-full py-8"
+          }
           onChange={handleCategoryChange}
         />
 
         <Combobox
           title="Select city"
           items={cityitems}
-          btnStyles={"w-[300px] justify-between bg-transparent rounded-full py-8"}
+          btnStyles={
+            "w-[300px] justify-between bg-transparent rounded-full py-8"
+          }
           onChange={handleCityChange}
         />
       </div>
       <div className="text-center mt-3">
-        <button className={`px-30 py-4 bg-blue-500 rounded-full`}>Search</button>
+        <button
+          className={`px-30 py-4 bg-slate-50 text-slate-800 rounded-full`}
+        >
+          Search
+        </button>
+      </div>
+      <div className="text-center mt-3 flex items-center justify-center flex-col md:flex-row gap-3">
+        <Link href={"#"}>
+          <button className={`px-30 py-4 bg-purple-500 rounded-full flex items-center gap-3`}>
+            <FaShoppingBag />
+
+            Post a job
+          </button>
+        </Link>
+        <Link href={"#"}>
+          <button className={`px-30 py-4 bg-blue-500 rounded-full flex items-center gap-3`}>
+            <PiStudentBold />
+            Search Jobs
+          </button>
+        </Link>
       </div>
     </div>
   );
