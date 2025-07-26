@@ -1,5 +1,6 @@
 import React from "react";
 import { CiSearch } from "react-icons/ci";
+import Link from 'next/link';
 
 
 export default function HeaderSearch() {
@@ -8,7 +9,7 @@ export default function HeaderSearch() {
       <input
         type="text"
         placeholder="Search"
-        className="bg-[#0F172B] border border-[#334155] rounded-full px-2 py-1 text-white"
+        className=" border border-[#334155] rounded-full pl-4 pr-2 outline-none py-1 text-slate-600"
       ></input>
       <button type="submit" className="cursor-pointer">
         <CiSearch
