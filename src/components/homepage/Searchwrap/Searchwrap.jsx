@@ -3,10 +3,13 @@ import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import Combobox from "./Combobox";
 
+
 export default function Searchwrap() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
+
+  console.log(searchInput)
 
   const categoryitems = [
     { id: "1", title: "Backlog" },
@@ -46,24 +49,29 @@ export default function Searchwrap() {
       </h2>
       <br />
       <br />
-      <div className="flex items-center justify-center gap-4">
+      <div className="flex items-center flex-col justify-center gap-4 max-w-[500]">
         <Input
           placeholder="Search for jobs"
-          className="w-[500px]"
+          className="w-[300px] py-8 px-6 rounded-full"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <Combobox
           title="Select category"
           items={categoryitems}
+          btnStyles={"w-[300px] justify-between bg-transparent rounded-full py-8"} 
           onChange={handleCategoryChange}
         />
 
         <Combobox
           title="Select city"
           items={cityitems}
+          btnStyles={"w-[300px] justify-between bg-transparent rounded-full py-8"}
           onChange={handleCityChange}
         />
+      </div>
+      <div className="text-center mt-3">
+        <button className={`px-30 py-4 bg-blue-500 rounded-full`}>Search</button>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-export default function Combobox({ title, items, onChange }) {
+export default function Combobox({ title, items, onChange, btnStyles }) {
   const [open, setOpen] = useState(false);
   const [id, setId] = useState("");
 
@@ -37,7 +37,7 @@ export default function Combobox({ title, items, onChange }) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-[200px] justify-between bg-transparent"
+          className={`${btnStyles}`}
         >
           {id ? items.find((item) => item.id === id)?.title : title}
           <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
