@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react'
 import HeaderSearch from './HeaderSearch';
 import MobileHeader from './MobileHeader';
-import { CiSearch } from "react-icons/ci";
 import UserProfileBox from './UserProfileBox';
 import PostOrApply from './PostOrApply';
 
