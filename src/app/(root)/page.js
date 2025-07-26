@@ -4,6 +4,7 @@ import React from 'react'
 import Searchwrap from '@/components/homepage/Searchwrap/Searchwrap'
 import TopEmployers from '@/components/homepage/TopEmployes/TopEmployers'
 import HowitWorks from '@/components/homepage/Howitworks/HowitWorks'
+import BrowseByCategory from '@/components/homepage/BrowseByCategory/BrowseByCategory'
 
 
 export default function page() {
@@ -12,6 +13,7 @@ export default function page() {
     <Searchwrap />
     <TopEmployers />
     <HowitWorks />
+    <BrowseByCategory />
     </>
   )
 }
