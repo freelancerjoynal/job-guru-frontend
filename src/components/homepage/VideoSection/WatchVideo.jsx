@@ -3,7 +3,7 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 
 export default function WatchVideo() {
   return (
-    <div className='py-20 bg-[url("/images/videobg.jpg")] bg-fixed text-white'>
+    <div className='py-20 bg-[url("/images/videobg.jpg")] bg-scroll bg-no-repeat text-white'>
       <h2 className="text-2xl uppercase text-gray-400 mb-2 text-center">
         Here You Can See
       </h2>
