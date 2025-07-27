@@ -1,13 +1,12 @@
 "use client";
 import { jobCategories } from "@/database/JobCategories";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { GoTriangleRight } from "react-icons/go";
 
 const BrowseJobsBy = () => {
   const [activeTab, setActiveTab] = useState(0);
-
-  
 
   return (
     <section className="py-25 bg-white">
@@ -40,11 +39,13 @@ const BrowseJobsBy = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 mx-auto w-full">
           {jobCategories[activeTab].map((category, index) => (
             <div key={index} className="flex mt-1 items-center gap-2">
-              <h3 className="font-medium text-gray-800 flex items-center gap-1">
-                {" "}
-                <GoTriangleRight />
-                {category.name}
-              </h3>
+              <Link href={"#"}>
+                <h3 className="font-medium text-gray-800 flex items-center gap-1">
+                  {" "}
+                  <GoTriangleRight />
+                  {category.name}
+                </h3>
+              </Link>
               <span className="text-sm text-green-500">({category.count})</span>
             </div>
           ))}
