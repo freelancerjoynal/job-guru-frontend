@@ -6,6 +6,7 @@ import TopEmployers from '@/components/homepage/TopEmployes/TopEmployers'
 import HowitWorks from '@/components/homepage/Howitworks/HowitWorks'
 import BrowseByCategory from '@/components/homepage/BrowseByCategory/BrowseByCategory'
 import FeaturedJobs from '@/components/homepage/FeaturedJobs/FeaturedJobs'
+import WatchVideo from '@/components/homepage/VideoSection/WatchVideo'
 
 
 export default function page() {
@@ -16,6 +17,7 @@ export default function page() {
     <HowitWorks />
     <BrowseByCategory />
     <FeaturedJobs />
-    </>
+    <WatchVideo />
+    </> 
   )
 }
